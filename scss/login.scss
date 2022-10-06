@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'general';
+
+.remember {
+    display: flex;
+    gap: .5rem;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#switch {
+    width: 2.5rem;
+    height: 1.3rem;
+    border-radius: 10px;
+    background-color: rgb(125, 125, 125);
+    padding: 2px;
+
+    toggle {
+        width: 1rem;
+        background-color: #fff;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+
+#oauth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    * {
+        height: 3rem;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 1rem;
+        border: 0;
+    }
+
+    .fb {
+        background-color: #3b5998;
+    }
+
+    .gm {
+        background-color: #BB001B;
+    }
+}
