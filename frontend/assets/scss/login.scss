@@ -1,0 +1,65 @@
+@import 'config';
+@import 'general';
+
+.remember {
+    display: flex;
+    gap: .5rem;
+    cursor: pointer;
+    align-items: center;
+
+    .switch {
+        width: 2.5rem;
+        height: 1.5rem;
+        border-radius: 15px;
+        background-color: rgb(125, 125, 125);
+        padding: 2px;
+    
+        .toggle {
+            height: 100%;
+            aspect-ratio: 1;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    .active {
+        background-color: $primary-color-1;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+#oauth {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+        height: 3rem;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+
+        display: flex;
+        padding-inline: 2rem;
+        gap: 1rem;
+        align-items: center;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    .fb {
+        background-color: #3b5998;
+    }
+
+    .gm {
+        background-color: #BB001B;
+    }
+}

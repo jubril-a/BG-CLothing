@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BG Store - login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="https://kit.fontawesome.com/6d54de810b.js" crossorigin="anonymous"></script>
+    <script src="assets/js/index.js" defer></script>
 </head>
 <body>
     <div id="container">
         <main>
-            <div id="main-2">
+            <div class="main-2">
+                <h2><span class="h2--part">MODESTY</span><br>
+                    <span class="h2--part">WITH</span><br>
+                    <span class="h2--part">SIMPLICITY</span>
+                </h2>
             </div>
-            <div id="main-1">
+            <div class="main-1--container">
+            <div class="main-1">
                 <!---<div id="logo">
                     <a href="/index.html">
                         <img src="assets/images/logo.png" alt="BG ClOTHING">
@@ -29,11 +36,11 @@
                         <input type="password" name="password" id="password">
                     </div>
                     <div class="remember">
-                        <div id="switch">
-                            <div id="toggle"></div>
+                        <div class="switch">
+                            <div class="toggle"></div>
                         </div>
-                        <input type="checkbox" name="remember" id="remember">
-                        <label for="remember">Remember me</label>
+                        <input type="checkbox" name="remember" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
                     </div>
                     <input type="submit" value="Log In">
                 </form>
@@ -42,9 +49,10 @@
                     <p>Don't have an account?<a href="signup.html"> Sign up</a></p>
                 </div> 
                 <div id="oauth">
-                    <button class="fb">Sign In With Facebook</button>
-                    <button class="gm">Sign In With Gmail</button>
+                    <a href="" class="fb"><i class="fa-brands fa-facebook"></i>Sign In With Facebook</a>
+                    <a href="" class="gm"><i class="fa-brands fa-google"></i>Sign In With Gmail</a>
                 </div>                                                                                                                                                                     
+            </div>
             </div>
         </main>
     </div>

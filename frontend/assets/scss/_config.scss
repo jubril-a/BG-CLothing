@@ -1,0 +1,30 @@
+$primary-color-1: rgb(239, 119, 29);
+
+// break points
+$max-mobile: 48rem;
+$max-tablet: 64rem;
+
+@mixin tablet {
+    @media (min-width: $max-mobile) and (max-width: $max-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-and-lower {
+    @media (max-width: $max-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet-and-larger {
+    @media (min-width: $max-mobile) {
+        @content;
+    }
+}
+
+@mixin larger {
+    @media (min-width: $max-tablet) {
+        @content;
+    }
+}
+
