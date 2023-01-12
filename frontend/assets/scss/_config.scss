@@ -1,4 +1,5 @@
 $primary-color-1: rgb(239, 119, 29);
+$primary-color-2: rgb(26, 43, 111); //rgb(34, 49, 108);
 
 // break points
 $max-mobile: 48rem;
@@ -27,4 +28,3 @@ $max-tablet: 64rem;
         @content;
     }
 }
-

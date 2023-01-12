@@ -1,0 +1,190 @@
+#logo a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    span:first-child {
+        font-size: 2rem;
+        font-weight: 900;
+        color: $primary-color-1;
+    }
+
+    span:last-child {
+        font-size: 1.5rem;
+        font-weight: 200;
+        letter-spacing: -3px;
+        color: $primary-color-2;
+    }
+}
+
+header {
+    padding: 1rem 1.5rem;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 2rem;            
+        }
+    }
+
+    a:not(#logo a) {
+        font-size: .9rem;
+        font-weight: 500;
+        color: $primary-color-2;
+    
+        &.active {
+            color: $primary-color-1;
+        }
+    
+        &:hover {
+            color: $primary-color-1;
+        }
+    }
+}
+
+i {
+    font-size: 1.2rem;
+    
+    &.fa-cart-shopping {
+        color: $primary-color-1;
+    }
+
+    &.fa-bars {
+        display: none;
+    }
+}
+
+@media (max-width: 64rem) {  
+    .main-nav {
+        display: none;
+    }
+    
+    i.fa-bars {
+        display: block;
+    }
+}
+
+@media (min-width: 45rem) and (max-width: 64rem) {
+    #logo {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav {
+        > * {
+            flex: 1;
+            display: flex;
+        }
+        
+        .other-nav {
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media (max-width: 44rem) {
+    nav {
+        .other-nav {
+            display: none;
+        }
+    }
+
+    #logo {
+        order: -1;
+    }
+}
+
+// tablet navbar
+@media (min-width: 45rem) and (max-width: 64rem) {
+    nav.expanded {
+        .nav-switch {
+            z-index: 150;
+        }
+
+        .main-nav {
+            display: block;
+            position: absolute;
+            inset: 0;
+            width: 25rem;
+            background-color: rgb(255, 255, 255);
+            z-index: 100;
+            padding: 6rem 4rem 3rem;
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+//mobile navbar
+@media (max-width: 44rem) {
+    nav.expanded {
+        display: block;
+
+
+        .nav-switch {
+            z-index: 150;
+            float: right;
+        }
+
+        .main-nav, .other-nav {
+            display: block;
+            background-color: rgb(255, 255, 255);
+
+            ul {
+                flex-direction: column;
+            }
+        }
+
+        .main-nav {
+            margin-top: 2rem;
+            padding-block: 2rem;
+        }
+
+        .other-nav {
+            padding-bottom: 2rem;
+        }
+
+    }
+}
+
+// account link dropdown
+.account {
+    .account-dropdown {
+        display: none;
+    }
+
+    .fa {
+        margin-bottom: .5rem;
+    }    
+
+    &:hover {
+        position: relative;
+
+        .fa {
+            transform: rotate(180deg);
+        }
+
+        .account-dropdown {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: -2.5rem;
+            background-color: #fff;
+
+            * {
+                font-weight: 400;
+                width: 10rem;
+                padding-block: 1rem;
+                padding-left: 1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+            }
+        }
+    }
+}

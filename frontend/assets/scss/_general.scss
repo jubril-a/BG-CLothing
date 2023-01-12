@@ -16,13 +16,6 @@ html {
     padding: 2.5rem;
     margin: auto;
     max-width: 25rem;
-    /*#logo {
-        width: 15rem;
-
-        img {
-            max-width: 100%;
-        }
-    }*/
 
     h1 {
         font-size: 2rem;
@@ -101,7 +94,7 @@ html {
 
         .main-2 {
             flex: 1.5;
-            background: linear-gradient(rgba(239, 119, 29, .8), rgba(239, 119, 29, .8)), url(../images/models.jpg) no-repeat center center;
+            background: linear-gradient(to right, rgba(239, 119, 29, .8), rgba(239, 121, 31, .8)), url(../images/models.jpg) no-repeat center center;
             background-size: cover;
 
             display: flex;

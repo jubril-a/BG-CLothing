@@ -1,0 +1,98 @@
+@import 'resets';
+@import 'config';
+@import 'utils';
+@import 'header';
+@import 'hero';
+@import 'about';
+@import 'choose';
+
+#container {
+    background-color: rgba(34, 49, 108, .1);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        background-image: url(../images/hero-background.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 120%;
+        z-index: -100;
+        opacity: .1;
+
+        @media (min-width: 45rem) {
+            background-image: url(../images/hero-background-2.png);
+            background-size: 40%;
+            background-position: -10% 20%;
+
+        }
+    }
+}
+
+section:not(#hero) {
+    padding: calc(1rem + 5vw) 2rem;
+
+    @media (min-width: 40rem) {
+        padding-inline: calc(5rem + 4vw);
+    }
+
+    @media (min-width: 60rem) {
+        padding-inline: 0;
+        max-width: min(62rem, 85vw);
+        margin: auto;
+    }
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: .9rem;
+}
+
+@media (min-width: 45rem) {
+    h2 {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        letter-spacing: 2px;
+        font-size: calc(1.3rem + 1vw);
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+// categories
+.categories {
+    h2 {
+        color: $primary-color-2;
+    }
+
+    .category-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .categories-items {
+        display: flex;
+        gap: 10rem;
+    }
+
+    .current-category {
+        background-color: $primary-color-2;
+        transform: scale(1.2);
+    }
+
+    span:not(.current-category) {
+        background-color: $primary-color-2;
+        opacity: .5;
+    }
+}
