@@ -1,0 +1,13 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: $primary-color-1;
+    color: #fff;
+    padding: .8rem 1rem;
+    font-weight: 500;
+    font-size: .8rem;
+    display: inline-block;
+}

@@ -1,0 +1,228 @@
+#hero {
+    padding: 2rem 0 0 1rem;
+    
+    .hero-paragraph {
+        color: rgba(0, 0, 0, .8);
+        margin-block: 1rem;
+        max-width: 300px;
+    }
+
+    .hero-image {
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .hero-desktop {
+        display: none;
+    }
+}
+
+.header-1 {
+    line-height: 1;
+
+    .span-1{
+        font-size: calc(1rem + 2vw);
+        font-weight: 500;
+        color: rgba(0, 0, 0, .75);
+    }
+
+    //margin-bottom: 1rem;
+
+    .span-2 {
+        font-weight: 900;
+        color: #fff;
+        font-size: calc(2rem + 3vw);
+        text-shadow: 2px 2px rgba(0, 0, 0, .5);
+        letter-spacing: 2px;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media (min-width: 28rem) and (max-width: 719px) {
+    header {
+        background-color: rgba(26, 43, 111, .25);
+    }
+
+    #hero {
+        max-height: 60vh;
+        background: linear-gradient(to right, rgba(26, 43, 111, .25), rgb(26, 43, 111, .25)), url(../images/model2.png) no-repeat 100% center;
+        background-size: contain;
+
+        .top {
+            display: grid;
+
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .hero-text {
+            padding: calc(1rem + 5vw) 1.5rem 15rem;
+        }
+
+        .span-1 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-paragraph {
+            color: #fff
+        }
+    }
+
+}
+
+@media (min-width: 45rem) and (max-width: 1023px) {
+    #hero {
+        display: grid;
+        padding: 2rem calc(3rem + 2vw) 3rem;
+
+        .top, .bottom {
+            grid-area: 1 / 1;
+        }
+
+        .top {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .hero-text {
+            margin: 6rem 2rem;
+            z-index: 2;
+        }
+
+        .hero-image {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .bottom {
+            display: flex;
+            width: 100%;
+            z-index: -100;
+        }
+
+        .left {
+            background-color: rgba(26, 43, 111, .5);
+            width: 50%;
+        }
+
+        .right {
+            background-color: rgba(26, 43, 111, .2);
+            width: 50%;
+        }
+    }
+
+    .header-1 {
+        line-height: 1.1;
+
+        .span-1 {
+            font-size: calc(1.25rem + 1vw);
+            font-weight: 600;
+        }
+
+        .span-2 {
+            font-size: calc(2.3rem + 3vw);
+        }
+    }
+}
+
+@media (min-width: 64rem) {
+    #hero {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        max-width: 70rem;
+        margin: auto;
+
+        .hero-paragraph {
+            max-width: 350px;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        .bottom {
+            display: none;
+        }
+
+        .hero-desktop {
+            display: block;
+        }
+
+        img:not(.hero-text img) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .grid-item-2 {
+        .img-3 {
+            width: 26rem;
+            height: 100%;
+            background-color: rgba(26, 43, 111, .2);
+            z-index: -1;
+        }
+    }
+
+    .grid-item-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 0  0 4rem;
+        width: fit-content;
+        column-gap: 1rem;
+        z-index: 2;
+
+        .img-1 {
+            width: 17rem;
+            height: 10rem;
+            align-self: end;
+        }
+
+        .img-2 {
+            width: 13rem;
+            height: 16rem;
+            align-self: end;
+        }
+    }
+
+    .hero-text {
+        grid-column: span 2;
+    }
+
+    .header-1 {
+        display: grid;
+        grid-template-columns: auto;
+
+        .span-1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, .7);
+        }
+    
+        .span-2 {
+            font-weight: 700;
+            font-size: 3rem;
+            text-shadow: none;
+            grid-area: 2 / 1;
+            align-self: center;
+            margin-left: 6rem;
+        }
+
+        img {
+            display: block;
+            width: 25rem;
+            grid-area: 2 / 1;
+            margin-left: 4rem;
+        }
+    }
+}
