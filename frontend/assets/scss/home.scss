@@ -5,6 +5,7 @@
 @import 'hero';
 @import 'about';
 @import 'choose';
+@import 'categories';
 
 #container {
     background-color: rgba(34, 49, 108, .1);
@@ -69,71 +70,14 @@ p {
     }
 }
 
-// categories
-#categories-container {
-    background-color: #fff;
-}
+// deal of d day
+.dday-deal {
 
-.categories {
-    h2 {
-        color: $primary-color-2;
+    .product-info {
+        display: none;
     }
 
-    .category-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 4rem;
+    .buttons {
+        display: none;
     }
-
-    .categories-items {
-        display: flex;
-        gap: 10rem;
-        flex-wrap: wrap;
-
-        .current-category {
-            background-color: $primary-color-2;
-            transform: scale(1.2);
-        }
-
-        span:not(.current-category) {
-            display: none;
-        }
-        
-    }
-
-    .arrow {
-        color: $primary-color-2;
-        font-size: 1.5rem;
-        transform: scaleY(1.8);
-    }
-
-    .current-category-images {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 14rem);
-        gap: 3rem;
-        justify-content: center;
-        
-        .catg-img {
-            width: 14rem;
-            height: 25rem;
-            background-color: $primary-color-2;
-            border-radius: 20px;
-
-            img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                border-radius: 20px;
-            }
-        }
-    }
-
-    @media (min-width: 53rem) {
-        .categories-items span:not(.current-category) {
-            display: block;
-            background-color: $primary-color-2;
-            opacity: .5;
-        }
-    }    
 }

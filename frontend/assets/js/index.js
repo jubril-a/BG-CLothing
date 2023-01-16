@@ -12,6 +12,20 @@ rSwitch.addEventListener('click', () => {
     }
 })*/
 
+// scrollbar functionality
+const rightControl = document.getElementsByClassName('arrow')[1];
+const leftControl = document.getElementsByClassName('arrow')[0];
+const obj = document.getElementsByClassName('categories-wrapper')[0];
+
+leftControl.addEventListener('click', () => {
+    obj.scrollLeft -= 150;
+ })
+
+ rightControl.addEventListener('click', () => {
+    obj.scrollLeft += 150;
+ })
+
+
 // navigation toggle
 nSwitch.addEventListener('click', () => {
     collapsed = nSwitch.classList.contains("fa-bars");
