@@ -5,7 +5,8 @@
 @import 'hero';
 @import 'about';
 @import 'choose';
-@import 'categories';
+@import 'products';
+@import 'footer';
 
 #container {
     background-color: rgba(34, 49, 108, .1);
@@ -70,8 +71,53 @@ p {
     }
 }
 
+//arrivals
+#arrivals-container {
+
+    .products-wrapper--with-arrow {
+        display: grid;
+
+        > * {
+            grid-column: 1 / -1;
+            grid-row: 1;
+        }
+    }
+
+    .products-container {
+        display: grid;
+        justify-items: center;
+    }
+
+    .arrivals-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .products-wrapper {
+        gap: 1rem;
+        margin-inline: 1rem;
+    }
+
+    .product {
+        flex: 0 0 min(11rem, 100%);
+        height: 18rem;
+    }
+    
+    img {
+        border-radius: 0;
+    }
+
+    .button {
+        background-color: $primary-color-2;
+        text-align: center;
+        margin-top: 2rem;
+        width: fit-content;
+    }
+}
+
 // deal of d day
-.dday-deal {
+.deal {
+    height: 80vh;
 
     .product-info {
         display: none;
@@ -79,5 +125,65 @@ p {
 
     .buttons {
         display: none;
+    }
+}
+
+//gift-card
+#vip-card {
+    color: #fff;
+    background: linear-gradient(to right, rgba(239, 119, 29, .8), rgba(239, 121, 31, .8)), url(../images/models.jpg) no-repeat center center;
+
+    .gift-card {
+        padding-block: 2.5rem;
+    }
+}
+
+.gift-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 3rem;
+    align-items: center;
+
+    span {
+        font-size: calc(5rem + 3vw);
+        font-weight: 900;
+        letter-spacing: -12px;
+    }
+
+    p {
+        text-align: center;
+        letter-spacing: .5px;
+    }
+
+    .gift-card--image {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    img {
+        border-radius: 30px;
+        width: 20rem;
+    }
+
+    @media (min-width: 45rem) {
+        width: max-content;
+        flex-direction: row;
+        gap: 5rem;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 60rem) {
+        gap: 5rem;
+        
+        /*> * {
+            flex: 0 0 50%;
+        }*/
+
+        .text {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
     }
 }

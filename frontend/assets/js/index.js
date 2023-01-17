@@ -13,18 +13,31 @@ rSwitch.addEventListener('click', () => {
 })*/
 
 // scrollbar functionality
-const rightControl = document.getElementsByClassName('arrow')[1];
-const leftControl = document.getElementsByClassName('arrow')[0];
-const obj = document.getElementsByClassName('categories-wrapper')[0];
+const rightControl = document.getElementsByClassName('fa-greater-than');
+const leftControl = document.getElementsByClassName('fa-less-than');
+const obj = document.getElementsByClassName('products-wrapper');
 
-leftControl.addEventListener('click', () => {
-    obj.scrollLeft -= 150;
+Array.from(rightControl).forEach((control) => {
+    control.addEventListener('click', () => {
+        if (control.classList.contains('arrivals')) {
+            obj[1].scrollLeft += 150;
+        } else {
+            obj[0].scrollLeft += 150;
+        }
+        
+     })
  })
 
- rightControl.addEventListener('click', () => {
-    obj.scrollLeft += 150;
+ Array.from(leftControl).forEach((control) => {
+    control.addEventListener('click', () => {
+        if (control.classList.contains('arrivals')) {
+            obj[1].scrollLeft -= 150;
+        } else {
+            obj[0].scrollLeft -= 150;
+        }
+        
+     })
  })
-
 
 // navigation toggle
 nSwitch.addEventListener('click', () => {
