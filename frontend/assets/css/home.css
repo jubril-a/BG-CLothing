@@ -36,6 +36,7 @@ a {
   font-weight: 500;
   font-size: 0.8rem;
   display: inline-block;
+  cursor: pointer;
 }
 
 #logo a {
@@ -716,14 +717,111 @@ p {
   width: fit-content;
 }
 
-.deal {
-  height: 80vh;
+#deal-container {
+  background-color: rgba(26, 43, 111, 0.3);
 }
-.deal .product-info {
-  display: none;
+
+.deal h2 {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
-.deal .buttons {
-  display: none;
+.deal .image-container {
+  display: flex;
+  column-gap: 0.5rem;
+  justify-content: center;
+}
+.deal img:not(.product-image) {
+  height: fit-content;
+}
+.deal .product-image-container {
+  width: min(100%, 14rem);
+}
+.deal .product-image {
+  max-width: 100%;
+  border-radius: 20px;
+}
+.deal .product-info .price {
+  color: rgba(0, 0, 0, 0.8);
+  margin-block: 1rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+}
+@media (min-width: 45rem) {
+  .deal {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .deal > h2 {
+    grid-column: 1/-1;
+  }
+  .deal h3 {
+    margin-bottom: 0.3rem;
+  }
+  .deal .image-container {
+    grid-row: 2;
+  }
+  .deal .all-info {
+    grid-row: 2;
+    align-self: center;
+    justify-content: center;
+    display: grid;
+    row-gap: 2.5rem;
+  }
+  .deal ul * {
+    display: inline;
+    color: #fff;
+  }
+  .deal ul li:last-child {
+    background-color: rgb(239, 119, 29);
+    padding: 2px 5px;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  .deal .product-info .price {
+    text-align: left;
+  }
+  .deal .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+  }
+  .deal .buttons span {
+    margin-bottom: 1rem;
+  }
+  .deal .buttons span:last-child {
+    background-color: rgb(26, 43, 111);
+  }
+}
+@media (min-width: 60rem) {
+  .deal h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .deal .description {
+    margin-block: 1rem;
+  }
+  .deal .rating-xl {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}
+@media (max-width: 45rem) {
+  .deal .size-l {
+    display: none;
+  }
+}
+@media (max-width: 60rem) {
+  .deal .size-xl {
+    display: none;
+  }
+}
+@media (min-width: 60rem) {
+  .deal .size-s {
+    display: none;
+  }
 }
 
 #vip-card {
