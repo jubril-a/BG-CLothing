@@ -12,6 +12,33 @@ rSwitch.addEventListener('click', () => {
     }
 })*/
 
+// scrollbar functionality
+const rightControl = document.getElementsByClassName('fa-greater-than');
+const leftControl = document.getElementsByClassName('fa-less-than');
+const obj = document.getElementsByClassName('products-wrapper');
+
+Array.from(rightControl).forEach((control) => {
+    control.addEventListener('click', () => {
+        if (control.classList.contains('arrivals')) {
+            obj[1].scrollLeft += 150;
+        } else {
+            obj[0].scrollLeft += 150;
+        }
+        
+     })
+ })
+
+ Array.from(leftControl).forEach((control) => {
+    control.addEventListener('click', () => {
+        if (control.classList.contains('arrivals')) {
+            obj[1].scrollLeft -= 150;
+        } else {
+            obj[0].scrollLeft -= 150;
+        }
+        
+     })
+ })
+
 // navigation toggle
 nSwitch.addEventListener('click', () => {
     collapsed = nSwitch.classList.contains("fa-bars");
