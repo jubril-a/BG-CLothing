@@ -20,7 +20,7 @@
     .products-wrapper {
         display: flex;
         gap: 2rem;
-        overflow-x: auto;
+        overflow: auto hidden;
         scrollbar-width: none;
         scroll-snap-type: inline mandatory;
 

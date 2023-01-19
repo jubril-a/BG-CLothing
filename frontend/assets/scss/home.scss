@@ -141,7 +141,6 @@ p {
     }
 
     .product-image {
-        max-width: 100%;
         border-radius: 20px;
     }
 
@@ -207,6 +206,7 @@ p {
 
             span {
                 margin-bottom: 1rem;
+                text-align: center;
 
                 &:last-child {
                     background-color: $primary-color-2;
@@ -229,6 +229,18 @@ p {
             display: flex;
             align-items: center;
             gap: .3rem;
+        }
+
+        .product-image-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
         }
     }
 
