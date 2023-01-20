@@ -1,6 +1,12 @@
 const nSwitch = document.getElementsByClassName('nav-switch')[0];
 const navigation = document.getElementById('navigation');
 
+const rightControl = document.getElementsByClassName('fa-greater-than');
+const leftControl = document.getElementsByClassName('fa-less-than');
+const obj = document.getElementsByClassName('products-wrapper');
+
+const header = document.getElementsByTagName('header')[0];
+
 /*// remember toggle on login page
 rSwitch.addEventListener('click', () => {
     active = rSwitch.classList.contains("active");
@@ -13,10 +19,6 @@ rSwitch.addEventListener('click', () => {
 })*/
 
 // scrollbar functionality
-const rightControl = document.getElementsByClassName('fa-greater-than');
-const leftControl = document.getElementsByClassName('fa-less-than');
-const obj = document.getElementsByClassName('products-wrapper');
-
 Array.from(rightControl).forEach((control) => {
     control.addEventListener('click', () => {
         if (control.classList.contains('arrivals')) {
@@ -56,5 +58,13 @@ nSwitch.addEventListener('click', () => {
     }
 })
 
+// change header background color on scroll
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 5) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+})
 
 

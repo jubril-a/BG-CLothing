@@ -57,7 +57,14 @@ a {
 }
 
 header {
+  z-index: 100;
   padding: 1rem 1.5rem;
+  position: fixed;
+  width: 100%;
+}
+header.scrolled {
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 header nav {
   display: flex;
@@ -128,6 +135,7 @@ i.fa-bars {
     display: block;
     position: absolute;
     inset: 0;
+    height: 100vh;
     width: 25rem;
     background-color: rgb(255, 255, 255);
     z-index: 100;
@@ -153,7 +161,7 @@ i.fa-bars {
     flex-direction: column;
   }
   nav.expanded .main-nav {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-block: 2rem;
   }
   nav.expanded .other-nav {
@@ -188,7 +196,7 @@ i.fa-bars {
 }
 
 #hero {
-  padding: 2rem 0 0 1rem;
+  padding: 5rem 0 0 1rem;
 }
 #hero .hero-paragraph {
   color: rgba(0, 0, 0, 0.8);
@@ -198,9 +206,6 @@ i.fa-bars {
 #hero .hero-image {
   display: flex;
   align-items: flex-end;
-}
-#hero .hero-image img {
-  max-width: 100%;
 }
 #hero .hero-desktop {
   display: none;
@@ -253,7 +258,7 @@ i.fa-bars {
 @media (min-width: 45rem) and (max-width: 1023px) {
   #hero {
     display: grid;
-    padding: 2rem calc(3rem + 2vw) 3rem;
+    padding: 5rem calc(3rem + 2vw) 3rem;
   }
   #hero .top, #hero .bottom {
     grid-area: 1/1;
@@ -590,7 +595,7 @@ footer .lnks-n-info {
     justify-content: space-between;
   }
 }
-footer span {
+footer span, footer a[href="#hero"] {
   font-weight: 600;
   display: block;
   margin-bottom: 0.5rem;

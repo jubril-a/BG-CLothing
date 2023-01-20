@@ -1,5 +1,5 @@
 #hero {
-    padding: 2rem 0 0 1rem;
+    padding: 5rem 0 0 1rem;
     
     .hero-paragraph {
         color: rgba(0, 0, 0, .8);
@@ -10,10 +10,6 @@
     .hero-image {
         display: flex;
         align-items: flex-end;
-
-        img {
-            max-width: 100%;
-        }
     }
 
     .hero-desktop {
@@ -82,7 +78,7 @@
 @media (min-width: 45rem) and (max-width: 1023px) {
     #hero {
         display: grid;
-        padding: 2rem calc(3rem + 2vw) 3rem;
+        padding: 5rem calc(3rem + 2vw) 3rem;
 
         .top, .bottom {
             grid-area: 1 / 1;
@@ -139,7 +135,7 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         max-width: 70rem;
-        min-height: 90vh;
+        //min-height: 100vh;
         margin: auto;
 
         .hero-paragraph {
