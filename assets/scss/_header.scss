@@ -95,7 +95,7 @@ i {
     }
 }
 
-@media (max-width: 44rem) {
+@media (max-width: 45rem) {
     nav {
         .other-nav {
             display: none;
@@ -108,7 +108,7 @@ i {
 }
 
 // tablet navbar
-@media (min-width: 45rem) and (max-width: 64rem) {
+@media (min-width: 46rem) and (max-width: 64rem) {
     nav.expanded {
         .nav-switch {
             z-index: 150;
@@ -132,7 +132,7 @@ i {
 }
 
 //mobile navbar
-@media (max-width: 44rem) {
+@media (max-width: 45rem) {
     nav.expanded {
         display: block;
 
