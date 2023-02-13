@@ -4,7 +4,7 @@
 }
 
 html {
-    font-family: Montserrat;
+    font-family: Inter;
     line-height: 1.5;
 }
 
@@ -94,7 +94,8 @@ html {
 
         .main-2 {
             flex: 1.5;
-            background: linear-gradient(to right, rgba(239, 119, 29, .8), rgba(239, 121, 31, .8)), url(../images/models.jpg) no-repeat center center;
+            background: linear-gradient(to right, rgba(239, 119, 29, .8), rgba(239, 121, 31, .8)),
+                url(../images/models.jpg) no-repeat center center;
             background-size: cover;
 
             display: flex;

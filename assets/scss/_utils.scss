@@ -12,3 +12,34 @@
     display: inline-block;
     cursor: pointer;
 }
+
+.subhead {
+    color: $primary-color-1;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.hero-paragraph {
+    color: rgba(0, 0, 0, .8);
+    max-width: 400px;
+}
+
+.color-grey {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.color-white {
+    color: #fff;
+}
+
+.bold-600 {
+    font-weight: 600;
+}
+
+.bold-700 {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
