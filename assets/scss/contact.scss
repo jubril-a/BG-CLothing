@@ -1,0 +1,243 @@
+@import 'resets';
+@import 'config';
+@import 'utils';
+@import 'header';
+@import 'footer';
+
+
+header {
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);
+}
+
+#hero-wrapper {
+    background-color: $primary-color-1;
+    width: 100%;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 3rem 2rem 2rem;
+    margin: auto;
+
+
+    @media (min-width: 64rem) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: min(62rem, 85vw);
+        padding: 9rem 0 6rem;
+    }
+
+    .hero-text {
+        padding: 5.5rem 1rem 0;
+        line-height: 1.3;
+        color: #fff;
+        max-width: 500px;
+
+        h1 {
+            margin-bottom: .5rem;
+            font-size: calc(1.5rem + 2vw);
+        }
+
+        p {
+            margin-bottom: .3rem;
+            font-size: .9rem;
+
+            @media (min-width: 64rem) {
+                font-size: 1.1rem;
+            }
+        }
+
+    }
+    
+    .hero-image {
+        width: 15rem;
+        height: 20rem;
+        border-radius: 4rem 0 4rem 0;
+        background: url(../images/c-model-mobile.jpeg) no-repeat center bottom;
+        background-size: cover;
+        
+        
+        @media (min-width: 46rem) and (max-width: 64rem) {
+            width: 30rem;
+            background: url(../images/c-model-tablet.jpeg) no-repeat right top;
+
+        }
+    }
+    
+}
+
+.form-n-map {
+    display: grid;
+    gap: 3rem;
+}
+
+//form beginning
+.heading {
+    margin-bottom: 1.5rem;
+
+    h2 {
+        font-weight: 400;
+    
+        span {
+            font-weight: 700;
+            color: $primary-color-1;
+        }
+    }
+    
+    .tag {
+        font-size: .8rem;
+    }
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+
+    @media (max-width: 54rem) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .form--field {
+        display: flex;
+        gap: 1rem;
+        border: 1px solid rgba(0, 0, 0, .4);
+        border-radius: 5px;
+        padding: .4rem;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+            font-size: 2rem;
+            color: $primary-color-1
+        }
+    }
+
+    .form--input {
+        display: grid;
+    }
+
+    label {
+        color: rgba(0, 0, 0, .7);
+        font-size: .9rem;
+    }
+
+    input {
+        border: 0;
+        font-size: 1.2rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: $primary-color-1;
+        padding-block: .7rem;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        padding: .4rem;
+    }
+
+    .form--field, input[type="submit"], textarea {
+        width: 100%;
+
+        @media (min-width: 54rem) {
+            width: 20rem;
+        }
+    }
+
+    .focused {
+        border: 1px solid $primary-color-1;
+    }
+}
+
+// google maps
+
+.map-container {
+    width: 100%;
+    height: 20rem;
+    background-color: #d4e6f7;
+}
+
+@media (min-width: 54rem) {
+    .form-n-map {
+        grid-template-columns: auto 1fr;
+    }
+
+    .map {
+        display: flex;
+        flex-direction: column;
+
+        .map-container {
+            flex-grow: 1;
+        }
+
+        .heading {
+            text-align: right;
+        }
+    }
+}
+
+//info section
+.info-boxes {
+    background-color: #daebf9;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: calc(1rem + 1vw);
+    }
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1rem;
+    color: #343434;
+
+    .icon-box {
+        background-color: #343434;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 5px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: .7rem;
+
+        i {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+    }
+}
+
+.info-box {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border-radius: .5rem;
+   
+    .head {
+        font-weight: 700;
+    }
+
+    > p {
+        font-weight: 600;
+    }
+}

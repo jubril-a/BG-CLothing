@@ -67,7 +67,8 @@ i {
     }
 }
 
-@media (max-width: 64rem) {  
+@media (max-width: 64rem) { 
+
     .main-nav {
         display: none;
     }
@@ -96,6 +97,7 @@ i {
 }
 
 @media (max-width: 45rem) {
+    
     nav {
         .other-nav {
             display: none;

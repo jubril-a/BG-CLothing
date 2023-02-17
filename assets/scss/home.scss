@@ -3,13 +3,13 @@
 @import 'utils';
 @import 'header';
 @import 'hero';
-@import 'about';
+@import 'about-us';
 @import 'choose';
 @import 'products';
 @import 'footer';
 
 #container {
-    background-color: rgba(34, 49, 108, .1);
+    background-color: #e6f0f9;
 
     &::before {
         content: "";

@@ -184,6 +184,10 @@
 
     .hero-text {
         grid-column: span 2;
+
+        > * {
+            margin-bottom: .8rem;
+        }
     }
 
     .header-1 {

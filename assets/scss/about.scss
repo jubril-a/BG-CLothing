@@ -6,7 +6,7 @@
 
 
 #hero {
-    background-color: rgba(34, 49, 108, 0.1);
+    background-color: #e6f0f9;
 }
 
 h2 {
@@ -233,7 +233,6 @@ h2 {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    //margin-bottom: 1rem;
 
     @media (min-width: 927px) and (max-width: 60rem) {
         justify-content: flex-start;
