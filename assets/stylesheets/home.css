@@ -254,6 +254,9 @@ i.fa-bars {
 #hero {
   padding: 5rem 0 0 1rem;
 }
+.hero-paragraph {
+    margin-block: 1rem;
+}
 #hero .hero-image {
   display: flex;
   align-items: flex-end;
